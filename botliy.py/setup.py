@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="botliy",
+    name="botliysdk",
     version="1.0.0",
     author="Botliy",
     description="The official API SDK for botliy.online",
