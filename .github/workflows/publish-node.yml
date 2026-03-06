@@ -1,0 +1,33 @@
+name: Publish Node SDK to NPM
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'botliy.js/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+          
+      - name: Install dependencies
+        working-directory: botliy.js
+        run: npm install
+        
+      - name: Build JS SDK
+        working-directory: botliy.js
+        run: npm run build
+        
+      - name: Publish to NPM
+        working-directory: botliy.js
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
