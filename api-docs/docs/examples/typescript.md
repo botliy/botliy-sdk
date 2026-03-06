@@ -9,7 +9,7 @@ Clean Webhook integration structured using TypeScript and the official SDK.
 ### Installation
 
 ```bash
-npm install botliy discord.js express
+npm install botliysdk discord.js express
 ```
 
 ### Example Usage
@@ -17,7 +17,7 @@ npm install botliy discord.js express
 ```typescript
 import { Client, GatewayIntentBits, EmbedBuilder, TextChannel } from 'discord.js';
 import express, { Request, Response } from 'express';
-import { Botliy } from 'botliy';
+import { Botliy } from 'botliysdk';
 
 const config = {
   DISCORD_TOKEN: "YOUR_BOT_TOKEN",

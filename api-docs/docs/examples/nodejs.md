@@ -11,14 +11,14 @@ A full working bot example posting stats and receiving webhook events using the 
 Install the official SDK and required modules via npm:
 
 ```bash
-npm install botliy discord.js express
+npm install botliysdk discord.js express
 ```
 
 ### Example Usage
 
 ```javascript
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
-const { Botliy } = require('botliy');
+const { Botliy } = require('botliysdk');
 const express = require('express');
 
 // ================= CONFIG =================
